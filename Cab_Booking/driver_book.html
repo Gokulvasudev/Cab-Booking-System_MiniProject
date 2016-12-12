@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Travel Details</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="booking\style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="booking\demo.css" media="all" />
+</head>
+<body>
+<div class="container">
+			<!-- freshdesignweb top bar -->
+            <!--/ freshdesignweb top bar -->
+			<header>
+				<h1>Travel Details</h1>
+            </header>       
+      <div  class="form">
+      <form action="driver_book.php" method="post" onSubmit="return checkdate(this);">
+	    <input id="snapHostID" name="snapHostID" type="hidden" value="FLJRPLR3SDA9"/>
+ 			<script type="text/javascript">
+			function checkDateInpuWithTodays() {
+ 			//get today's date in string
+			 var todayDate = new Date();
+			 //need to add one to get current month as it is start with 0
+ 			var todayMonth = todayDate.getMonth() + 1;
+ 			var todayDay = todayDate.getDate();
+ 			var todayYear = todayDate.getFullYear();
+ 			var todayDateText = todayDay + "/" + todayMonth + "/" + todayYear;
+ 			//
+ 
+			//get date input from SharePoint DateTime Control
+ 			var inputDateText = document.getElementById('<%= datepicker.ClientID %>' + '_' + '<%= datepicker.ID %>' + 'Date').value;
+ 			//
+ 
+			//Convert both input to date type
+ 			var inputToDate = Date.parse(inputDateText);
+ 			var todayToDate = Date.parse(todayDateText);
+ 			//
+ 
+			//compare dates
+ 			if (inputToDate > todayToDate) {alert("the input is later than today");}
+ 			else if (inputToDate < todayToDate) {alert("the input is earlier than today");}
+ 			else {alert("the input is same as today");}
+ 			}
+
+			
+			</script>     
+    		<form id="contactform"> 
+    				
+                   <p class="contact"><label for="phone">Bill_id</label></p> 
+            <input name="bill_id" placeholder="ID" required="" type="text"> <br>   
+                    
+                <p class="contact"><label for="date">Date</label></p> 
+    			<input id="username" name="date" placeholder="Booking Date" required="" tabindex="3" type="date"> 
+    			
+            
+            <p class="contact"><label for="phone">Kilometer Consumed</label></p> 
+            <input name="km" placeholder="Kilometer" required="" type="text"> <br>
+            
+            <input class="buttom" name="submit" id="submit" tabindex="5" value="Update" type="submit"> 	 
+   </form> 
+   </form>
+</div>      
+</div>
+
+</body>
+</html>

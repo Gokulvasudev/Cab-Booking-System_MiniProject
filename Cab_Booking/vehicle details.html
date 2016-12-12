@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vehicle Details</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="booking\style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="booking\demo.css" media="all" />
+</head>
+<body>
+<div class="container">
+			<!-- freshdesignweb top bar -->
+            <!--/ freshdesignweb top bar -->
+			<header>Vehicle Details</h1>
+            </header>       
+      <div  class="form">
+      <form action="vehicle details.php" method="post" >      
+                        
+    		<form id="contactform"> 
+                		
+                <p class="contact"><label for="username">Owner's Name</label></p> 
+    			<input id="username" name="name" placeholder="Name" required="" tabindex="1" type="text"> 
+                
+                <p class="contact"><label for="username">Address</label></p> 
+    			<input id="username" name="address" placeholder="Address" required="" tabindex="2" type="text"> 
+                
+                <p class="contact"><label for="phone">Mobile phone</label></p> 
+            <input id="phone" name="phone" placeholder="Phone number" required=""  maxlength="10" pattern="[0-9]{10}" type="text"> <br>
+                
+                <p class="contact"><label for="phone">Registration Number</label></p> 
+            <input id="phone" name="regno" placeholder="Registration Number" required="" type="text"> <br>
+    			
+                <p class="contact"><label for="name">Vehicle Model</label></p> 
+    			<input id="name" name="model" placeholder="Model" required="" maxlength="4" pattern="[0-9]{4}" tabindex="3" type="text"> 
+                
+            <select name="Car Manufacturer">
+            <option value="select">Manufacturer</option>
+            <option value="hyundai">Hyundai</option>
+            <option value="honda">Honda</option>
+            <option value="tata">Tata</option>
+            <option value="maruti">Maruti</option>
+            <option value="toyota">Toyota</option>
+            <option value="renault">Renault</option>
+            <option value="mahindra">Mahindra</option>
+            </select><br><br>
+            
+            <input class="buttom" name="submit" id="submit" tabindex="5" value="Submit" type="submit"> 	 
+   </form> 
+</form>
+</div>      
+</div>
+
+</body>
+</html>
